@@ -2,13 +2,13 @@
 
 buildscript {
     repositories {
-        jcenter()
+        google()
+        mavenCentral()
         mavenCentral()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.0.0-alpha3'//new
-        classpath 'com.frogermcs.androiddevmetrics:androiddevmetrics-plugin:0.4'
+        classpath 'com.android.tools.build:gradle:8.2.1'
         classpath 'org.aspectj:aspectjtools:1.8.9'
         classpath 'org.aspectj:aspectjweaver:1.8.9'
     }
@@ -16,13 +16,22 @@ buildscript {
 
 allprojects {
     repositories {
-        jcenter()
+        google()
+        maven {
+            url 'https://maven.aliyun.com/repository/jcenter'
+            content {
+                includeGroup 'com.yydcdut.sdlv'
+                includeGroup 'com.yydcdut'
+                includeGroup 'com.commit451'
+            }
+        }
+        mavenCentral()
         mavenCentral()
     }
 }
 
 ext {
-    compileSdkVersion = 25
+    compileSdkVersion = 34
     targetSdkVersion = compileSdkVersion
     minSdkVersion = 14
 //    buildToolsVersion = "24.0.2"
@@ -34,3 +43,8 @@ ext {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+tasks.withType(JavaCompile).configureEach {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}
+

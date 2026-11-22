@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <manifest
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.yydcdut.note">
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
         android:name=".NoteApplication"
@@ -9,12 +8,14 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
+        <activity android:name="com.squareup.leakcanary.internal.DisplayLeakActivity" android:exported="false" />
+        <activity android:name="com.github.moduth.blockcanary.ui.DisplayActivity" android:exported="false" />
         <activity
             android:name=".views.home.impl.SplashActivity"
             android:label="@string/app_name"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
-            android:theme="@style/ThemeBlue">
+            android:theme="@style/ThemeBlue" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -27,7 +28,6 @@
             android:process=":dex"
             android:screenOrientation="portrait"
             android:theme="@style/ThemeBlue"/>
-
         <activity
             android:name=".views.home.impl.IntroduceActivity"
             android:screenOrientation="portrait"
@@ -104,7 +104,6 @@
             android:label=""
             android:screenOrientation="portrait"
             android:theme="@style/ThemeBlue"/>
-
         <activity
             android:name=".test.TestUIActivity"
             android:label=""
@@ -119,7 +118,7 @@
             android:process=":makephotos"/>
         <service android:name=".service.CheckService"/>
 
-        <!-- ************ 友盟 ************ -->
+        <!-- ************ ??? ************ -->
         <meta-data
             android:name="UMENG_APPKEY"
             android:value="55361d44e0f55ae664003b4e"/>
@@ -127,11 +126,11 @@
             android:name="UMENG_MESSAGE_SECRET"
             android:value="318c30366d0e153a9bf71b712e7046e3"/>
 
-        <!-- 渠道 -->
+        <!-- ??? -->
         <meta-data
             android:name="UMENG_CHANNEL"
             android:value="${UMENG_CHANNEL_VALUE}"/>
-        <!-- ************ 友盟 ************ -->
+        <!-- ************ ??? ************ -->
 
         <!-- ************ Camera360  Begin ************ -->
         <meta-data
@@ -150,7 +149,7 @@
         <activity
             android:name="com.tencent.tauth.AuthActivity"
             android:launchMode="singleTask"
-            android:noHistory="true">
+            android:noHistory="true" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
 
@@ -160,12 +159,11 @@
                 <data android:scheme="tencent1104732115"/>
             </intent-filter>
         </activity>
-
         <activity
             android:name="com.tencent.connect.common.AssistActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="true">
         </activity>
         <!-- ************ QQ End ************ -->
 
@@ -182,7 +180,7 @@
         <!--android:name="com.baidu.lbsapi.API_KEY"-->
         <!--android:value="${BAIDU_MAP_KEY}"/>-->
         <service
-            android:name="com.baidu.location.f"
+            android:exported="true" android:name="com.baidu.location.f"
             android:enabled="true"
             android:process=":remote">
             <intent-filter>
@@ -216,3 +214,4 @@
     <uses-feature android:name="android.hardware.camera"/>
     <uses-feature android:name="android.hardware.camera.flash"/>
 </manifest>
+

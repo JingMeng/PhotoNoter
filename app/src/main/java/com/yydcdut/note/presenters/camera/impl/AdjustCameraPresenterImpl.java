@@ -1,6 +1,6 @@
 package com.yydcdut.note.presenters.camera.impl;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.yydcdut.note.model.camera.ICameraFocus;
 import com.yydcdut.note.model.camera.ICameraModel;

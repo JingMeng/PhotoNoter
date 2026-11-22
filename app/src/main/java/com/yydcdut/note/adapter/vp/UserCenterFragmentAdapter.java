@@ -3,7 +3,7 @@ package com.yydcdut.note.adapter.vp;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.os.Bundle;
-import android.support.v13.app.FragmentPagerAdapter;
+import androidx.legacy.app.FragmentPagerAdapter;
 
 import com.yydcdut.note.utils.Const;
 import com.yydcdut.note.views.login.impl.UserDetailFragment;

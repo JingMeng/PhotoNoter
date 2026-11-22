@@ -6,11 +6,11 @@ import android.app.Fragment;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.os.Build;
-import android.support.annotation.NonNull;
-import android.support.v13.app.FragmentCompat;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AlertDialog;
+import androidx.annotation.NonNull;
+import androidx.legacy.app.FragmentCompat;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.appcompat.app.AlertDialog;
 
 import com.yydcdut.note.R;
 import com.yydcdut.note.presenters.IPresenter;
@@ -142,7 +142,7 @@ public class PermissionAspect {
         }
     }
 
-    @After("execution(* android.support.v4.app.FragmentActivity.onRequestPermissionsResult(..))")
+    @After("execution(* androidx.legacy.app.FragmentActivity.onRequestPermissionsResult(..))")
     public void afterPermissionRequestBack(JoinPoint joinPoint) {
         YLog.i(TAG, "afterPermissionRequestBack");
         Object[] objects = joinPoint.getArgs();

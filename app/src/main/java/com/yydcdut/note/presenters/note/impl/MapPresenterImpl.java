@@ -1,7 +1,7 @@
 package com.yydcdut.note.presenters.note.impl;
 
 import android.media.ExifInterface;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.baidu.mapapi.map.BaiduMap;
 import com.baidu.mapapi.map.BitmapDescriptorFactory;

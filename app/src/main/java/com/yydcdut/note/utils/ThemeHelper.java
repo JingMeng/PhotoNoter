@@ -115,7 +115,7 @@ public class ThemeHelper {
 
     public static int getPrimaryColor(Context context) {
         TypedValue typedValue = new TypedValue();
-        int[] colorAttr = new int[]{R.attr.colorPrimary};
+        int[] colorAttr = new int[]{androidx.appcompat.R.attr.colorPrimary};
         int indexOfAttrColor = 0;
         TypedArray a = context.obtainStyledAttributes(typedValue.data, colorAttr);
         int color = a.getColor(indexOfAttrColor, -1);
@@ -125,7 +125,7 @@ public class ThemeHelper {
 
     public static int getDarkPrimaryColor(Context context) {
         TypedValue typedValue = new TypedValue();
-        int[] colorAttr = new int[]{R.attr.colorPrimaryDark};
+        int[] colorAttr = new int[]{androidx.appcompat.R.attr.colorPrimaryDark};
         int indexOfAttrColor = 0;
         TypedArray a = context.obtainStyledAttributes(typedValue.data, colorAttr);
         int color = a.getColor(indexOfAttrColor, -1);

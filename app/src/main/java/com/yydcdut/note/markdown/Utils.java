@@ -1,6 +1,6 @@
 package com.yydcdut.note.markdown;
 
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.text.style.AlignmentSpan;
 
 import com.yydcdut.rxmarkdown.RxMDEditText;

@@ -3,7 +3,7 @@ package com.yydcdut.note.model.gallery;
 import android.content.Context;
 import android.database.Cursor;
 import android.provider.MediaStore;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.yydcdut.note.entity.gallery.MediaFolder;
 import com.yydcdut.note.entity.gallery.MediaPhoto;

@@ -1,6 +1,6 @@
 package com.yydcdut.note.views.note;
 
-import android.support.annotation.DrawableRes;
+import androidx.annotation.DrawableRes;
 import android.text.SpannableStringBuilder;
 
 import com.yydcdut.note.entity.PhotoNote;

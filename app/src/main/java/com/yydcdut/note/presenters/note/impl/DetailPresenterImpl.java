@@ -3,7 +3,7 @@ package com.yydcdut.note.presenters.note.impl;
 import android.app.Activity;
 import android.content.Context;
 import android.media.ExifInterface;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.text.SpannableStringBuilder;
 import android.text.TextUtils;
 

@@ -6,8 +6,8 @@ import android.graphics.Color;
 import android.graphics.Point;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
@@ -196,7 +196,7 @@ public abstract class BaseActivity extends AppCompatActivity implements IThemeVi
      */
     public int getActionBarSize() {
         TypedValue typedValue = new TypedValue();
-        int[] textSizeAttr = new int[]{R.attr.actionBarSize};
+        int[] textSizeAttr = new int[]{androidx.appcompat.R.attr.actionBarSize};
         int indexOfAttrTextSize = 0;
         TypedArray a = obtainStyledAttributes(typedValue.data, textSizeAttr);
         int actionBarSize = a.getDimensionPixelSize(indexOfAttrTextSize, -1);
@@ -233,7 +233,7 @@ public abstract class BaseActivity extends AppCompatActivity implements IThemeVi
      */
     public int getThemeColor() {
         TypedValue typedValue = new TypedValue();
-        int[] colorAttr = new int[]{R.attr.colorPrimary};
+        int[] colorAttr = new int[]{androidx.appcompat.R.attr.colorPrimary};
         int indexOfAttrColor = 0;
         TypedArray a = obtainStyledAttributes(typedValue.data, colorAttr);
         int color = a.getColor(indexOfAttrColor, -1);

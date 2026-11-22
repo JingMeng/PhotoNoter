@@ -1,7 +1,7 @@
 package com.yydcdut.note.presenters.gallery.impl;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.yydcdut.note.R;
 import com.yydcdut.note.entity.gallery.MediaPhoto;

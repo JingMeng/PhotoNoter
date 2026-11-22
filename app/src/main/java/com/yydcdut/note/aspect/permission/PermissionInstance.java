@@ -2,7 +2,7 @@ package com.yydcdut.note.aspect.permission;
 
 import android.app.Application;
 import android.content.Context;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 /**
  * Created by yuyidong on 2017/2/4.

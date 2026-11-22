@@ -1,6 +1,6 @@
 package com.yydcdut.note.entity.gallery;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 /**
  * Created by yuyidong on 16/3/19.

@@ -63,7 +63,7 @@ public class CircleProgressBarLayout extends FrameLayout implements View.OnTouch
 
     public int getThemeColor() {
         TypedValue typedValue = new TypedValue();
-        int[] colorAttr = new int[]{R.attr.colorPrimary};
+        int[] colorAttr = new int[]{androidx.appcompat.R.attr.colorPrimary};
         int indexOfAttrColor = 0;
         TypedArray a = getContext().obtainStyledAttributes(typedValue.data, colorAttr);
         int color = a.getColor(indexOfAttrColor, -1);

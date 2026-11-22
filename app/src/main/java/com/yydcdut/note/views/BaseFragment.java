@@ -5,7 +5,7 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Point;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -105,7 +105,7 @@ public abstract class BaseFragment extends Fragment {
 
     public int getActionBarSize() {
         TypedValue typedValue = new TypedValue();
-        int[] textSizeAttr = new int[]{R.attr.actionBarSize};
+        int[] textSizeAttr = new int[]{androidx.appcompat.R.attr.actionBarSize};
         int indexOfAttrTextSize = 0;
         TypedArray a = getContext().obtainStyledAttributes(typedValue.data, textSizeAttr);
         int actionBarSize = a.getDimensionPixelSize(indexOfAttrTextSize, -1);
@@ -115,7 +115,7 @@ public abstract class BaseFragment extends Fragment {
 
     public int getThemeColor() {
         TypedValue typedValue = new TypedValue();
-        int[] colorAttr = new int[]{R.attr.colorPrimary};
+        int[] colorAttr = new int[]{androidx.appcompat.R.attr.colorPrimary};
         int indexOfAttrColor = 0;
         TypedArray a = getContext().obtainStyledAttributes(typedValue.data, colorAttr);
         int color = a.getColor(indexOfAttrColor, -1);

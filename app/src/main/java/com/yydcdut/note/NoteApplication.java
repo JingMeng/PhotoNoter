@@ -7,9 +7,8 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Environment;
-import android.support.multidex.MultiDex;
+import androidx.multidex.MultiDex;
 
-import com.frogermcs.androiddevmetrics.AndroidDevMetrics;
 import com.github.moduth.blockcanary.BlockCanary;
 import com.squareup.leakcanary.LeakCanary;
 import com.umeng.analytics.MobclickAgent;
@@ -56,7 +55,6 @@ public class NoteApplication extends Application {
         if (BuildConfig.LOG_DEBUG) {
             LeakCanary.install(this);
             BlockCanary.install(this, new NoteBlockCanaryContext()).start();
-            AndroidDevMetrics.initWith(this);
             LooperPrinter.start();
             ChoreographerPrinter.start();
         }
